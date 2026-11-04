@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- Primary meta -->
-  <title>Let Me Prompt That For You – Send a ChatGPT, Claude &amp; Gemini Link | I Prompted It For You</title>
+  <title>Let Me Prompt That For You: Send a ChatGPT, Claude or Gemini Link</title>
   <meta name="description" content="The LMGTFY for AI. Type a question, get a shareable link, and watch your friend learn how to ask ChatGPT, Claude, Gemini, Perplexity, Grok or Copilot themselves. Free, no sign-up.">
   <meta name="keywords" content="let me prompt that for you, let me chatgpt that for you, let me ai that for you, lmgtfy for ai, lmgtfy chatgpt, ask chatgpt for me, chatgpt link generator, prompt link, i prompted it for you, let me claude that for you">
   <meta name="author" content="Oliver Mrakovics">
@@ -39,14 +39,14 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="I Prompted It For You – a chat box being typed into, with the words: Let me prompt that for you.">
+  <meta property="og:image:alt" content="I Prompted It For You: a chat box being typed into, with the words Let me prompt that for you.">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Let Me Prompt That For You">
   <meta name="twitter:description" content="The LMGTFY for AI. Type the question, send the link, let the robot do the talking.">
   <meta name="twitter:image" content="https://iprompteditforyou.com/og-image.png">
-  <meta name="twitter:image:alt" content="I Prompted It For You – Let me prompt that for you.">
+  <meta name="twitter:image:alt" content="I Prompted It For You: Let me prompt that for you.">
 
   <!-- Styles & scripts (no third-party requests; one self-hosted font) -->
   <link rel="preload" href="/assets/fonts/sora-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -128,7 +128,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="brand" href="/" aria-label="I Prompted It For You – home">
+    <a class="brand" href="/" aria-label="I Prompted It For You, home">
       <svg class="brand__mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="#icon-mark"></use></svg>
       <span class="brand__name">iprompted<span class="brand__accent">it</span>foryou</span>
     </a>
@@ -141,9 +141,8 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <p class="hero__eyebrow" data-step aria-live="polite">The LMGTFY for the AI era</p>
       <h1 id="hero-title" class="hero__title">Let me <span class="hero__highlight">prompt</span><br> that for you.</h1>
-      <p class="hero__lede" data-lede>For everyone who asks <em>you</em> instead of asking the AI. Type their question, send the link, and let the robot do the talking.</p>
+      <p class="hero__lede">For everyone who asks <em>you</em> instead of asking the AI. Type their question, send the link, and let the AI do the talking.</p>
 
       <form class="composer" id="composer" action="/" method="get" autocomplete="off">
         <div class="composer__box">
@@ -159,32 +158,36 @@
             enterkeyhint="send"
             placeholder="e.g. How do I boil an egg?"
             aria-describedby="prompt-help prompt-count"></textarea>
+
+          <!-- Overlays the bottom of the textarea. Ignores pointer events so clicks
+               on the hint or counter land in the textarea; only the controls are clickable. -->
           <div class="composer__bar">
-            <p id="prompt-help" class="composer__help"><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>Enter</kbd> to create the link</p>
-            <output id="prompt-count" class="composer__count" for="prompt" aria-live="off">0 / 2000</output>
+            <p class="composer__meta">
+              <span id="prompt-help" class="composer__help"><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>Enter</kbd> to create the link</span>
+              <output id="prompt-count" class="composer__count" for="prompt" aria-live="off">0 / 2000</output>
+            </p>
+            <div class="composer__actions">
+              <label for="ai" class="visually-hidden">Link opens in</label>
+              <div class="select">
+                <select id="ai" name="ai">
+                  <option value="chatgpt" selected>ChatGPT</option>
+                  <option value="claude">Claude</option>
+                  <option value="gemini">Gemini</option>
+                  <option value="perplexity">Perplexity</option>
+                  <option value="grok">Grok</option>
+                  <option value="copilot">Copilot</option>
+                  <option value="lechat">Le Chat</option>
+                  <option value="deepseek">DeepSeek</option>
+                  <option value="">Let them pick</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn--primary" data-create>
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg>
+                Create link
+              </button>
+            </div>
           </div>
           <svg class="cursor" data-cursor width="22" height="28" viewBox="0 0 22 28" aria-hidden="true" focusable="false"><path d="M1.5 1.5v21.2l5.6-5.2 3.9 8.9 3.6-1.6-3.9-8.7h7.6z" fill="#fff" stroke="#0d1729" stroke-width="2" stroke-linejoin="round"/></svg>
-        </div>
-
-        <div class="composer__options">
-          <label for="ai" class="composer__label">Link opens in</label>
-          <div class="select">
-            <select id="ai" name="ai">
-              <option value="chatgpt" selected>ChatGPT</option>
-              <option value="claude">Claude</option>
-              <option value="gemini">Gemini</option>
-              <option value="perplexity">Perplexity</option>
-              <option value="grok">Grok</option>
-              <option value="copilot">Copilot</option>
-              <option value="lechat">Le Chat</option>
-              <option value="deepseek">DeepSeek</option>
-              <option value="">Let them pick</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn--primary" data-create>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg>
-            Create link
-          </button>
         </div>
 
         <div class="result" data-result hidden>
@@ -218,6 +221,7 @@
         </ul>
       </section>
 
+      <p class="replay-step" data-step aria-live="polite" hidden></p>
       <p class="toast" data-toast role="status" aria-live="polite"></p>
     </section>
 
@@ -229,7 +233,7 @@
     <article class="content" aria-labelledby="about-title">
       <section class="content__section">
         <h2 id="about-title">What is “Let Me Prompt That For You”?</h2>
-        <p><strong>I Prompted It For You</strong> is <em>Let Me Google That For You</em> rebuilt for the age of AI chatbots. Everybody has that one friend, coworker or family member who sends you a question that ChatGPT could have answered in three seconds. Instead of answering, you type their question here, copy the <strong>“let me prompt that for you”</strong> link and send it back.</p>
+        <p><strong>I Prompted It For You</strong> is <em>Let Me Google That For You</em>, rebuilt for AI chatbots. Everybody has that one friend, coworker or family member who sends you a question that ChatGPT could have answered in three seconds. Instead of answering, you type their question here, copy the <strong>“let me prompt that for you”</strong> link and send it back.</p>
         <p>When they open it, they watch a cursor glide into a chat box, type their exact question letter by letter, and click straight into <strong>ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Le Chat or DeepSeek</strong>. The answer is waiting. The lesson sticks. Nobody gets hurt (much).</p>
       </section>
 

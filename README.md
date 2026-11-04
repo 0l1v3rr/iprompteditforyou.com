@@ -1,12 +1,12 @@
 <div align="center">
 
 <a href="https://iprompteditforyou.com">
-  <img src="og-image.png" alt="I Prompted It For You – Let me prompt that for you." width="720">
+  <img src="og-image.png" alt="I Prompted It For You: Let me prompt that for you." width="720">
 </a>
 
 # I Prompted It For You
 
-**Let me prompt that for you.** The [LMGTFY](https://letmegooglethat.com) for the AI era.
+**Let me prompt that for you.** Like [LMGTFY](https://letmegooglethat.com), but for AI chats.
 
 Type the question someone asked you, send them the link, and watch them learn how to ask ChatGPT, Claude, Gemini & co. themselves.
 
@@ -88,8 +88,7 @@ npm run assets     # re-render og-image.png, favicon.ico and app icons
 ├── icons/                   # PWA icons
 ├── favicon.svg, favicon.ico, apple-touch-icon.png
 ├── og-image.png             # 1200×630 social card
-├── site.webmanifest, robots.txt, sitemap.xml, llms.txt, humans.txt
-├── _headers                 # Security + cache headers (Cloudflare Pages / Netlify)
+├── site.webmanifest, robots.txt, sitemap.xml, llms.txt
 ├── scripts/                 # Asset generation (Playwright + Pillow)
 ├── tests/                   # node:test unit tests
 └── docs/                    # Documentation
@@ -105,7 +104,7 @@ npm run assets     # re-render og-image.png, favicon.ico and app icons
 
 ## Contributing
 
-Contributions are welcome: new providers, fixes for broken pre-fill URLs, translations, accessibility improvements. Read [CONTRIBUTING.md](CONTRIBUTING.md) first, and please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+Contributions are welcome: new providers, fixes for broken pre-fill URLs, translations, accessibility improvements. Open an issue to discuss bigger changes first. Keep PRs small, run `npm test`, and check the page on desktop and mobile.
 
 ## Inspiration
 

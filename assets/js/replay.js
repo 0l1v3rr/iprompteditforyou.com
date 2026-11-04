@@ -18,7 +18,7 @@ const prefersReducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)'
  * @param {import('./providers.js').Provider | null} opts.provider
  * @param {HTMLTextAreaElement} opts.input
  * @param {SVGElement} opts.cursor
- * @param {HTMLElement} opts.step   Element that shows "Step 1…" captions.
+ * @param {HTMLElement} opts.step   Floating pill that shows the "Step 1…" captions.
  * @param {(id: string) => HTMLButtonElement | null} opts.getButton
  * @param {(msg: string) => void} opts.toast
  * @param {() => void} opts.onDone
@@ -32,7 +32,7 @@ export async function playReplay({ prompt, provider, input, cursor, step, getBut
 
   const setStep = (text) => {
     step.textContent = text;
-    step.classList.add('is-step');
+    step.hidden = false;
   };
 
   const moveCursorTo = (el, xRatio = 0.5, yRatio = 0.5) => {

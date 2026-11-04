@@ -1,5 +1,5 @@
 /**
- * I Prompted It For You — entry point.
+ * I Prompted It For You: entry point.
  * Wires the composer (sender) and the replay (recipient).
  */
 import { getProvider } from './providers.js';
@@ -161,7 +161,7 @@ if (shared) {
   // Recipient view: keep shared links out of search indexes (canonical already points home).
   const robots = document.querySelector('meta[name="robots"]');
   robots?.setAttribute('content', 'noindex, follow');
-  document.title = `“${shared.prompt.slice(0, 60)}${shared.prompt.length > 60 ? '…' : ''}” – I Prompted It For You`;
+  document.title = `“${shared.prompt.slice(0, 60)}${shared.prompt.length > 60 ? '…' : ''}” | I Prompted It For You`;
 
   const { playReplay } = await import('./replay.js');
   await playReplay({
@@ -175,6 +175,7 @@ if (shared) {
       document.body.classList.remove('is-replay');
       input.readOnly = false;
       replayCta.hidden = false;
+      setTimeout(() => { step.hidden = true; }, 4000);
       if (shared.provider) aiSelect.value = shared.provider.id;
     },
   });

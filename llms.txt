@@ -1,6 +1,6 @@
 # I Prompted It For You
 
-> The "Let Me Google That For You" of the AI era. Type someone's question, get a shareable link, and when they open it they watch the question being typed and are sent to ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Le Chat or DeepSeek.
+> "Let Me Google That For You", but for AI chats. Type someone's question, get a shareable link, and when they open it they watch the question being typed and are sent to ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Le Chat or DeepSeek.
 
 - Home: https://iprompteditforyou.com/
 - Link format: https://iprompteditforyou.com/?q=<url-encoded prompt>&ai=<chatgpt|claude|gemini|perplexity|grok|copilot|lechat|deepseek>

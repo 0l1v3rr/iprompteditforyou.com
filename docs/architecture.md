@@ -39,5 +39,5 @@ Any key press, click, scroll or touch during the replay skips to the end and can
 - **One self-hosted font.** Sora (variable, Latin subset, 33 KB) is preloaded with `font-display: swap` and a metric-adjusted fallback, so text paints immediately without layout shift.
 - **Progressive enhancement.** The composer is a real `<form method="get" action="/">` whose fields are named `q` and `ai`. Without JavaScript, submitting it navigates to the share URL itself.
 - **Readable links.** Prompts are plain query parameters, not base64 or a database id. See [url-format.md](url-format.md).
-- **CSP-friendly.** No inline scripts (JSON-LD is a data block, not executed) and no inline `style` attributes, so the strict policy in `_headers` works unchanged.
+- **CSP-friendly.** No inline scripts (JSON-LD is a data block, not executed) and no inline `style` attributes, so a strict Content-Security-Policy (`default-src 'self'`, no `unsafe-inline`) works if your host adds one.
 - **Drop-in provider logos.** Each provider card loads `assets/icons/providers/<id>.svg` and is tinted with its `--brand` colour. See [providers.md](providers.md#logos).
