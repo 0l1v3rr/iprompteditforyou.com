@@ -155,7 +155,14 @@ kbd {
   -webkit-background-clip: text; background-clip: text; color: transparent;
   padding-bottom: .08em; /* keep descenders inside the clipped gradient */
 }
-.hero__highlight { position: relative; white-space: nowrap; }
+/* Safari/iOS doesn't paint a parent's background-clip:text gradient into a
+   positioned child, which left "prompt" invisible. Give the word its own fill. */
+.hero__highlight {
+  position: relative; white-space: nowrap;
+  background: linear-gradient(170deg, #c9f5fb 0%, var(--cyan) 55%, var(--teal) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
 .hero__highlight::after {
   content: ""; position: absolute; left: 1%; right: 1%; bottom: -.02em; height: .07em;
   border-radius: 99px; background: var(--grad);
