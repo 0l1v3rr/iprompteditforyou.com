@@ -152,23 +152,20 @@ kbd {
   line-height: 1.04; letter-spacing: -.045em; font-weight: 700;
   text-wrap: balance;
   background: var(--grad-title);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  padding-bottom: .08em; /* keep descenders inside the clipped gradient */
-}
-/* Safari/iOS doesn't paint a parent's background-clip:text gradient into a
-   positioned child, which left "prompt" invisible. Give the word its own fill. */
-.hero__highlight {
-  position: relative; white-space: nowrap;
-  background: linear-gradient(170deg, #c9f5fb 0%, var(--cyan) 55%, var(--teal) 100%);
   -webkit-background-clip: text; background-clip: text;
   color: transparent; -webkit-text-fill-color: transparent;
+  padding-bottom: .08em; /* keep descenders inside the clipped gradient */
 }
-.hero__highlight::after {
-  content: ""; position: absolute; left: 1%; right: 1%; bottom: -.02em; height: .07em;
-  border-radius: 99px; background: var(--grad);
-  transform-origin: left; animation: underline 1s .25s var(--ease-out) both;
+/* The underline is a plain background on the word, animated by width.
+   No positioning and no transform: Safari/iOS (and every iOS browser, which
+   all use WebKit) stops painting a parent's background-clip:text gradient
+   into positioned or composited children, which made "prompt" invisible. */
+.hero__highlight {
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--cyan), var(--teal) 50%, var(--green)) no-repeat 0 100% / 100% .07em;
+  animation: underline 1s .25s var(--ease-out) both;
 }
-@keyframes underline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes underline { from { background-size: 0% .07em; } to { background-size: 100% .07em; } }
 
 .hero__lede {
   max-width: 40rem; margin: clamp(8px, 1.6vh, 18px) auto 0;
