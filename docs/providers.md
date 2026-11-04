@@ -22,7 +22,7 @@ Providers live in [`assets/js/providers.js`](../assets/js/providers.js):
 | `perplexity` | `https://www.perplexity.ai/search?q=…` | Runs the search. |
 | `grok` | `https://grok.com/?q=…` | |
 | `copilot` | `https://copilot.microsoft.com/?q=…` | |
-| `lechat` | `https://chat.mistral.ai/chat?q=…` | |
+| `google` | `https://www.google.com/search?q=…&udm=50` | `udm=50` switches Google Search to AI Mode. |
 | `gemini` | `https://gemini.google.com/app` | No public pre-fill parameter → clipboard. |
 | `deepseek` | `https://chat.deepseek.com/` | No public pre-fill parameter → clipboard. |
 
@@ -58,5 +58,5 @@ Use official logos only as their brand guidelines allow (typically: unmodified, 
 | `perplexity` | `#20b8cd` |
 | `grok` | `#e7e9ee` |
 | `copilot` | `#2a8af6` |
-| `lechat` | `#fa520f` |
+| `google` | `#fbbc04` |
 | `deepseek` | `#4d6bfe` |

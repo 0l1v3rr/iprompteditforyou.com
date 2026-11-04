@@ -38,7 +38,7 @@ You can also skip the link and open the prompt directly in any supported chat.
 | Perplexity | `perplexity` | ✅ |
 | Grok       | `grok`       | ✅ |
 | Copilot    | `copilot`    | ✅ |
-| Le Chat    | `lechat`     | ✅ |
+| Google AI Mode | `google`  | ✅ |
 | Gemini     | `gemini`     | 📋 copied to clipboard |
 | DeepSeek   | `deepseek`   | 📋 copied to clipboard |
 
@@ -112,7 +112,7 @@ Standing on the shoulders of [Let Me Google That For You](https://letmegoogletha
 
 ## Disclaimer
 
-Not affiliated with or endorsed by OpenAI, Anthropic, Google, Perplexity, xAI, Microsoft, Mistral AI or DeepSeek. Product names are trademarks of their respective owners and are used only to identify the services the links open. The files in `assets/icons/providers/` ship as placeholders; if you add official logos, follow each company's brand guidelines.
+Not affiliated with or endorsed by OpenAI, Anthropic, Google, Perplexity, xAI, Microsoft or DeepSeek. Product names are trademarks of their respective owners and are used only to identify the services the links open. The files in `assets/icons/providers/` ship as placeholders; if you add official logos, follow each company's brand guidelines.
 
 ## License
 

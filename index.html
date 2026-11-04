@@ -83,7 +83,7 @@
         "featureList": [
           "Generate a shareable 'let me prompt that for you' link",
           "Animated replay that types the prompt for your friend",
-          "Open the prompt directly in ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Le Chat or DeepSeek",
+          "Open the prompt directly in ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Google AI Mode or DeepSeek",
           "No sign-up, no tracking, open source"
         ],
         "isPartOf": { "@id": "https://iprompteditforyou.com/#website" }
@@ -105,7 +105,7 @@
           {
             "@type": "Question",
             "name": "Which AI chats are supported?",
-            "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Claude, Perplexity, Grok, Microsoft Copilot and Mistral Le Chat open with your prompt pre-filled. Gemini and DeepSeek open in a new tab with the prompt copied to the clipboard, ready to paste." }
+            "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT, Claude, Perplexity, Grok, Microsoft Copilot and Google AI Mode open with your prompt pre-filled. Gemini and DeepSeek open in a new tab with the prompt copied to the clipboard, ready to paste." }
           },
           {
             "@type": "Question",
@@ -176,7 +176,7 @@
                   <option value="perplexity">Perplexity</option>
                   <option value="grok">Grok</option>
                   <option value="copilot">Copilot</option>
-                  <option value="lechat">Le Chat</option>
+                  <option value="google">Google AI</option>
                   <option value="deepseek">DeepSeek</option>
                   <option value="">Let them pick</option>
                 </select>
@@ -216,7 +216,7 @@
           <li><button type="button" class="provider" data-ai="perplexity"><span class="provider__logo"><img src="/assets/icons/providers/perplexity.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">Perplexity</span></button></li>
           <li><button type="button" class="provider" data-ai="grok"><span class="provider__logo"><img src="/assets/icons/providers/grok.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">Grok</span></button></li>
           <li><button type="button" class="provider" data-ai="copilot"><span class="provider__logo"><img src="/assets/icons/providers/copilot.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">Copilot</span></button></li>
-          <li><button type="button" class="provider" data-ai="lechat"><span class="provider__logo"><img src="/assets/icons/providers/lechat.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">Le Chat</span></button></li>
+          <li><button type="button" class="provider" data-ai="google"><span class="provider__logo"><img src="/assets/icons/providers/google.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">Google AI</span></button></li>
           <li><button type="button" class="provider" data-ai="deepseek"><span class="provider__logo"><img src="/assets/icons/providers/deepseek.svg" alt="" width="26" height="26" decoding="async"></span><span class="provider__name">DeepSeek</span></button></li>
         </ul>
       </section>
@@ -234,7 +234,7 @@
       <section class="content__section">
         <h2 id="about-title">What is “Let Me Prompt That For You”?</h2>
         <p><strong>I Prompted It For You</strong> is <em>Let Me Google That For You</em>, rebuilt for AI chatbots. Everybody has that one friend, coworker or family member who sends you a question that ChatGPT could have answered in three seconds. Instead of answering, you type their question here, copy the <strong>“let me prompt that for you”</strong> link and send it back.</p>
-        <p>When they open it, they watch a cursor glide into a chat box, type their exact question letter by letter, and click straight into <strong>ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Le Chat or DeepSeek</strong>. The answer is waiting. The lesson sticks. Nobody gets hurt (much).</p>
+        <p>When they open it, they watch a cursor glide into a chat box, type their exact question letter by letter, and click straight into <strong>ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot, Google AI Mode or DeepSeek</strong>. The answer is waiting. The lesson sticks. Nobody gets hurt (much).</p>
       </section>
 
       <section class="content__section" id="how-it-works" aria-labelledby="how-title">
@@ -259,7 +259,8 @@
           <li><strong>ChatGPT</strong>: opens chatgpt.com with the prompt pre-filled. The classic “let me ChatGPT that for you”.</li>
           <li><strong>Claude</strong>: starts a new chat on claude.ai with your question.</li>
           <li><strong>Perplexity</strong>: runs the prompt as a cited answer search.</li>
-          <li><strong>Grok</strong>, <strong>Microsoft Copilot</strong> and <strong>Mistral Le Chat</strong>: prompt pre-filled.</li>
+          <li><strong>Google AI Mode</strong>: asks Google's AI search directly. LMGTFY, all grown up.</li>
+          <li><strong>Grok</strong> and <strong>Microsoft Copilot</strong>: prompt pre-filled.</li>
           <li><strong>Gemini</strong> and <strong>DeepSeek</strong>: open in a new tab with the prompt copied to the clipboard, ready to paste.</li>
         </ul>
       </section>
@@ -297,7 +298,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>Made with mild sarcasm. Not affiliated with OpenAI, Anthropic, Google, Perplexity, xAI, Microsoft, Mistral AI or DeepSeek. All product names are trademarks of their respective owners.</p>
+    <p>Made with mild sarcasm. Not affiliated with OpenAI, Anthropic, Google, Perplexity, xAI, Microsoft or DeepSeek. All product names are trademarks of their respective owners.</p>
     <p><a href="https://github.com/0l1v3rr/iprompteditforyou.com" rel="noopener">Open source on GitHub</a> · MIT License</p>
   </footer>
 

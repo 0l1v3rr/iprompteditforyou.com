@@ -425,7 +425,7 @@ kbd {
 .provider[data-ai="perplexity"] { --brand: #20b8cd; }
 .provider[data-ai="grok"]       { --brand: #e7e9ee; }
 .provider[data-ai="copilot"]    { --brand: #2a8af6; }
-.provider[data-ai="lechat"]     { --brand: #fa520f; }
+.provider[data-ai="google"]     { --brand: #fbbc04; }
 .provider[data-ai="deepseek"]   { --brand: #4d6bfe; }
 
 /* ---------- Fake cursor (replay) ---------- */

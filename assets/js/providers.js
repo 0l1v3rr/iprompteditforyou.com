@@ -27,7 +27,7 @@ export const PROVIDERS = [
   { id: 'perplexity', name: 'Perplexity', prefill: true,  buildUrl: (p) => `https://www.perplexity.ai/search?q=${enc(p)}` },
   { id: 'grok',       name: 'Grok',       prefill: true,  buildUrl: (p) => `https://grok.com/?q=${enc(p)}` },
   { id: 'copilot',    name: 'Copilot',    prefill: true,  buildUrl: (p) => `https://copilot.microsoft.com/?q=${enc(p)}` },
-  { id: 'lechat',     name: 'Le Chat',    prefill: true,  buildUrl: (p) => `https://chat.mistral.ai/chat?q=${enc(p)}` },
+  { id: 'google',     name: 'Google AI',  prefill: true,  buildUrl: (p) => `https://www.google.com/search?q=${enc(p)}&udm=50` },
   { id: 'deepseek',   name: 'DeepSeek',   prefill: false, buildUrl: () => 'https://chat.deepseek.com/' },
 ];
 
