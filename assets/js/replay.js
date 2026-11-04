@@ -35,10 +35,18 @@ export async function playReplay({ prompt, provider, input, cursor, step, getBut
     step.hidden = false;
   };
 
-  const moveCursorTo = (el, xRatio = 0.5, yRatio = 0.5) => {
+  // The cursor is absolutely positioned inside <body> and placed in page
+  // coordinates, so it scrolls with the page by itself and only animates
+  // when it moves to a new target (no jitter during smooth scrolling).
+  const pagePoint = (el, x, y) => {
     const r = el.getBoundingClientRect();
-    cursor.style.transform = `translate(${r.left + r.width * xRatio}px, ${r.top + r.height * yRatio}px)`;
+    const b = body.getBoundingClientRect();
+    return [r.left - b.left + r.width * x, r.top - b.top + r.height * y];
   };
+  const setCursor = ([x, y]) => {
+    cursor.style.translate = `${Math.round(x)}px ${Math.round(y)}px`;
+  };
+  const moveCursorTo = (el, xRatio = 0.5, yRatio = 0.5) => setCursor(pagePoint(el, xRatio, yRatio));
 
   const press = async () => {
     cursor.classList.add('is-pressing');
@@ -67,8 +75,10 @@ export async function playReplay({ prompt, provider, input, cursor, step, getBut
 
     // Step 1: walk in and type.
     setStep('Step 1: Type your question');
+    // Start near the bottom-right of the visible screen, then glide in.
+    const b = body.getBoundingClientRect();
     cursor.style.transition = 'none';
-    cursor.style.transform = `translate(${innerWidth * 0.8}px, ${innerHeight + 40}px)`;
+    setCursor([innerWidth * 0.78 - b.left, innerHeight - 80 - b.top]);
     cursor.getBoundingClientRect(); // flush
     cursor.style.transition = '';
     cursor.classList.add('is-visible');
@@ -126,18 +136,29 @@ export async function playReplay({ prompt, provider, input, cursor, step, getBut
   } finally {
     disarmSkip();
     body.classList.remove('is-typing');
-    cursor.classList.remove('is-visible');
-    button?.classList.remove('is-hover', 'is-clicked');
   }
 
-  root.dataset.replayed = 'true';
-  onDone();
+  // Put the page back into its normal, interactive state.
+  const finish = () => {
+    cursor.classList.remove('is-visible');
+    button?.classList.remove('is-hover', 'is-clicked');
+    root.dataset.replayed = 'true';
+    onDone();
+  };
 
   if (redirect) {
+    // Leave the page exactly as the show ended (cursor on the pressed card)
+    // instead of flashing the composer controls and banner on the way out.
+    // If the visitor comes back with the Back button, tidy up then.
+    addEventListener('pageshow', (event) => { if (event.persisted) finish(); }, { once: true });
     toast(`Opening ${provider.name}…`);
     await wait(reduced ? 1200 : 300);
     location.assign(provider.buildUrl(prompt));
-  } else if (provider && !provider.prefill) {
+    return;
+  }
+
+  finish();
+  if (provider && !provider.prefill) {
     toast(`Click ${provider.name}: we'll copy the prompt for you to paste.`);
     button?.focus();
   }

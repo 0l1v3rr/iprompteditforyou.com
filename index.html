@@ -295,23 +295,6 @@
                 </button>
               </div>
             </div>
-            <svg
-              class="cursor"
-              data-cursor
-              width="22"
-              height="28"
-              viewBox="0 0 22 28"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M1.5 1.5v21.2l5.6-5.2 3.9 8.9 3.6-1.6-3.9-8.7h7.6z"
-                fill="#fff"
-                stroke="#0d1729"
-                stroke-width="2"
-                stroke-linejoin="round"
-              />
-            </svg>
           </div>
 
           <div class="result" data-result hidden>
@@ -725,5 +708,25 @@
       src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon='{"token": "c6fd4d4e7cbc4be2a108b3e38173e409"}'
     ></script>
+
+    <!-- Fake cursor for the replay. Lives at body level so it paints above
+         every card, and is positioned in page coordinates (see replay.js). -->
+    <svg
+      class="cursor"
+      data-cursor
+      width="22"
+      height="28"
+      viewBox="0 0 22 28"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M1.5 1.5v21.2l5.6-5.2 3.9 8.9 3.6-1.6-3.9-8.7h7.6z"
+        fill="#fff"
+        stroke="#0d1729"
+        stroke-width="2"
+        stroke-linejoin="round"
+      />
+    </svg>
   </body>
 </html>
