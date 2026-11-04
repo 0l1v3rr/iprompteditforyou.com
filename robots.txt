@@ -1,0 +1,6 @@
+# https://iprompteditforyou.com/robots.txt
+User-agent: *
+Allow: /
+# Shared links (/?q=...) are canonicalised to the home page and set to noindex.
+
+Sitemap: https://iprompteditforyou.com/sitemap.xml

@@ -1,0 +1,22 @@
+{
+  "name": "iprompteditforyou",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Let me prompt that for you: the LMGTFY for ChatGPT, Claude, Gemini and other AI chats.",
+  "homepage": "https://iprompteditforyou.com",
+  "repository": { "type": "git", "url": "git+https://github.com/0l1v3rr/iprompteditforyou.com.git" },
+  "bugs": { "url": "https://github.com/0l1v3rr/iprompteditforyou.com/issues" },
+  "license": "MIT",
+  "author": "Oliver Mrakovics (https://github.com/0l1v3rr)",
+  "type": "module",
+  "keywords": ["lmgtfy", "chatgpt", "claude", "gemini", "prompt", "ai", "static-site"],
+  "scripts": {
+    "dev": "npx --yes serve@14 . -l 3000",
+    "assets": "node scripts/generate-assets.mjs && python3 scripts/optimize-images.py",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "engines": { "node": ">=20" }
+}

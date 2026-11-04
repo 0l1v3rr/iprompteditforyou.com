@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- Source for /og-image.png (1200×630). Rendered by scripts/generate-assets.mjs. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Sora"; src: url("../assets/fonts/sora-latin-variable.woff2") format("woff2"); font-weight: 100 800; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    color: #eef6f8;
+    background:
+      radial-gradient(760px 460px at 100% 0%, rgb(103 232 249 / 16%), transparent 65%),
+      radial-gradient(620px 420px at 0% 100%, rgb(110 231 168 / 10%), transparent 65%),
+      #0d1729;
+    padding: 60px 72px;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  body::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background-image: linear-gradient(rgb(148 190 230 / 7%) 1px, transparent 1px), linear-gradient(90deg, rgb(148 190 230 / 7%) 1px, transparent 1px);
+    background-size: 105px 105px;
+    -webkit-mask-image: radial-gradient(75% 80% at 75% 25%, #000, transparent 80%);
+  }
+  .grad { background: linear-gradient(90deg, #67e8f9, #5eead4 50%, #6ee7a8); }
+  .brand { display: flex; align-items: center; gap: 16px; font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
+  .brand .it { -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h1 {
+    display: inline-block; align-self: flex-start; margin-top: 34px; font-size: 96px; line-height: 1.02; font-weight: 700; letter-spacing: -.05em; padding-bottom: 8px;
+    background: linear-gradient(170deg, #f4f8fa 5%, #a5f3fc 30%, #67e8f9 50%, #5eead4 72%, #6ee7a8 92%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .box {
+    position: relative; margin-top: 34px; width: 880px; height: 112px; border-radius: 30px;
+    background: linear-gradient(180deg, #16263f, #111e34);
+    box-shadow: 0 30px 70px -30px rgb(0 0 0 / 80%), 0 40px 100px -50px rgb(94 234 212 / 45%);
+    display: flex; align-items: center; padding: 0 34px; font-size: 36px; font-weight: 400; letter-spacing: -.02em;
+  }
+  .box::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px;
+    background: linear-gradient(120deg, rgb(103 232 249 / 85%), rgb(94 234 212 / 25%) 45%, rgb(110 231 168 / 85%));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .caret { display: inline-block; width: 3px; height: 42px; margin-left: 4px; background: #5eead4; vertical-align: -6px; }
+  .send { position: absolute; right: 20px; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 10px 30px -10px rgb(94 234 212 / 70%); }
+  .cursor { position: absolute; left: 500px; top: 68px; filter: drop-shadow(0 4px 8px rgb(0 0 0 / 60%)); }
+  .url { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; font-size: 25px; color: #a7b6c8; font-weight: 300; }
+  .url b { font-weight: 600; color: #eef6f8; }
+  .pill { position: absolute; right: 72px; top: 64px; padding: 10px 20px 10px 16px; border-radius: 999px; border: 1px solid #2c4566; background: rgb(17 30 52 / 80%); font-size: 20px; color: #a7b6c8; display: flex; align-items: center; gap: 10px; }
+  .pill::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #6ee7a8; box-shadow: 0 0 0 5px rgb(110 231 168 / 18%); }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <svg width="52" height="52" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#5eead4"/><stop offset="1" stop-color="#6ee7a8"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#g)"/><path d="M9 10h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-4.5 3.5V21H9a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z" fill="#0d1729"/><path d="M12.5 13.5 15 15.5l-2.5 2M16.5 18h3" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>iprompted<span class="it grad">it</span>foryou</span>
+  </div>
+
+  <div class="pill">The LMGTFY for the AI era</div>
+
+  <h1>Let me prompt<br>that for you.</h1>
+
+  <div class="box">
+    <span>How do I boil an egg?</span><span class="caret"></span>
+    <span class="send grad"><svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="#0d1729" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <svg class="cursor" width="34" height="44" viewBox="0 0 22 28"><path d="M1.5 1.5v21.2l5.6-5.2 3.9 8.9 3.6-1.6-3.9-8.7h7.6z" fill="#fff" stroke="#14110f" stroke-width="2" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="url">
+    <span>For ChatGPT, Claude, Gemini, Perplexity &amp; more</span>
+    <b>iprompteditforyou.com</b>
+  </div>
+</body>
+</html>
